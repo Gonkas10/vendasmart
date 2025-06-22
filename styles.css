@@ -1,218 +1,81 @@
-/* Definição das variáveis CSS para a paleta de cores */
-:root {
-    --dark-blue: #003366;      /* Azul-escuro para o topo/rodapé */
-    --light-blue: #66CCFF;     /* Azul-claro para destaques */
-    --neutral-gray: #4A4A4A;   /* Cinza-neutro para textos */
-    --white: #FFFFFF;          /* Branco para fundo e textos */
-    --light-green: #99CC99;    /* Verde-claro para botões */
-    --dark-gray-text: #333333; /* Um cinza mais escuro para o corpo do texto */
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendaSmart - A Plataforma Inteligente para Impulsionar as Tuas Vendas Online</title>
+    <!-- Liga o seu ficheiro CSS externo para o estilo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Adiciona um ícone simples para a aba do navegador (opcional, mas bom para a marca) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+</head>
+<body>
+    <!-- Cabeçalho da página: Logotipo e Navegação -->
+    <header>
+        <div class="container">
+            <div class="logo">VendaSmart</div>
+            <nav>
+                <ul>
+                    <li><a href="#welcome">Início</a></li>
+                    <li><a href="#prices">Preços</a></li>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#register">Registo</a></li>
+                    <li><a href="#privacy">Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-/* Reset básico de CSS para garantir consistência entre navegadores */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
-}
+    <!-- Secção de Boas-Vindas: Slogan e Chamada para Ação -->
+    <main>
+        <section id="welcome" class="hero-section">
+            <div class="container">
+                <h1>VendaSmart: A plataforma inteligente para impulsionar as tuas vendas online com automação e IA.</h1>
+                <p>Automatize as suas vendas online e integre inteligência artificial para resultados extraordinários.</p>
+                <a href="#get-started" class="button">Começar agora</a>
+            </div>
+        </section>
 
-/* Estilos globais para o corpo da página e tipografia */
-body {
-    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    color: var(--dark-gray-text); /* Cor do texto padrão */
-    background-color: var(--white); /* Fundo branco */
-}
+        <!-- Aqui pode adicionar mais secções como 'Preços', 'Sobre', etc. futuramente -->
+        <section id="prices" class="info-section">
+            <div class="container">
+                <h2>Preços</h2>
+                <p>Descubra os nossos planos flexíveis para todas as necessidades de negócio.</p>
+                <!-- Conteúdo de preços virá aqui -->
+            </div>
+        </section>
 
-/* Estilo para o contentor principal, centraliza e limita a largura do conteúdo */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; /* Padding nas laterais para ecrãs pequenos */
-}
+        <section id="login" class="info-section">
+            <div class="container">
+                <h2>Login</h2>
+                <p>Acesse a sua conta VendaSmart.</p>
+                <!-- Formulário de login virá aqui -->
+            </div>
+        </section>
 
-/* --- Cabeçalho --- */
-header {
-    background-color: var(--dark-blue);
-    color: var(--white);
-    padding: 1rem 0;
-    position: sticky; /* O cabeçalho fica fixo ao rolar */
-    top: 0;
-    z-index: 1000; /* Garante que o cabeçalho fica por cima de outros elementos */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave para profundidade */
-}
+        <section id="register" class="info-section">
+            <div class="container">
+                <h2>Registo</h2>
+                <p>Junte-se à comunidade VendaSmart e comece a impulsionar as suas vendas!</p>
+                <!-- Formulário de registo virá aqui -->
+            </div>
+        </section>
 
-header .container {
-    display: flex;
-    justify-content: space-between; /* Espaçamento entre logo e navegação */
-    align-items: center; /* Alinha verticalmente */
-}
+        <section id="privacy" class="info-section">
+            <div class="container">
+                <h2>Política de Privacidade</h2>
+                <p>A sua privacidade é a nossa prioridade. Saiba como protegemos os seus dados.</p>
+                <!-- Conteúdo da política de privacidade virá aqui -->
+            </div>
+        </section>
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--light-blue); /* Cor de destaque para o logotipo */
-}
+    </main>
 
-/* --- Navegação --- */
-nav ul {
-    list-style: none; /* Remove marcadores de lista */
-    display: flex; /* Links da navegação em linha */
-}
-
-nav ul li {
-    margin-left: 30px; /* Espaçamento entre os links */
-}
-
-nav ul li a {
-    color: var(--white);
-    text-decoration: none; /* Remove sublinhado dos links */
-    font-weight: 500;
-    transition: color 0.3s ease; /* Transição suave na cor ao passar o rato */
-}
-
-nav ul li a:hover {
-    color: var(--light-blue); /* Cor de destaque ao passar o rato */
-}
-
-/* --- Secção de Boas-Vindas (Hero) --- */
-.hero-section {
-    background-color: #f0f8ff; /* Um azul muito claro para o fundo da secção principal */
-    color: var(--dark-blue);
-    text-align: center;
-    padding: 100px 0; /* Espaçamento superior e inferior generoso */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 120px); /* Ocupa a maior parte da viewport */
-    border-bottom: 1px solid #eee; /* Linha de separação suave */
-}
-
-.hero-section h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    color: var(--dark-blue);
-    line-height: 1.2;
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    color: var(--neutral-gray);
-    max-width: 800px; /* Limita a largura do parágrafo */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* --- Botão "Começar agora" --- */
-.button {
-    display: inline-block;
-    background-color: var(--light-green);
-    color: var(--white);
-    padding: 15px 30px;
-    border-radius: 50px; /* Cantos arredondados */
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para o botão */
-}
-
-.button:hover {
-    background-color: #7BB97B; /* Um verde um pouco mais escuro no hover */
-    transform: translateY(-3px); /* Pequena elevação ao passar o rato */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Sombra mais pronunciada */
-}
-
-/* --- Secções de Informação Genéricas --- */
-.info-section {
-    padding: 80px 0;
-    text-align: center;
-    border-bottom: 1px solid #eeeeee; /* Separador entre secções */
-    background-color: var(--white);
-}
-
-.info-section:nth-child(odd) {
-    background-color: #f9f9f9; /* Fundo ligeiramente diferente para secções ímpares */
-}
-
-.info-section h2 {
-    font-size: 2.2rem;
-    color: var(--dark-blue);
-    margin-bottom: 25px;
-}
-
-.info-section p {
-    font-size: 1.1rem;
-    color: var(--neutral-gray);
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-}
-
-/* --- Rodapé --- */
-footer {
-    background-color: var(--dark-blue);
-    color: var(--white);
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 0.9rem;
-}
-
-/* --- Media Queries para Responsividade --- */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column; /* Empilha logo e navegação */
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column; /* Links da navegação em coluna */
-        margin-top: 15px;
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Espaçamento vertical entre links */
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    .hero-section {
-        padding: 80px 20px;
-        min-height: auto; /* Permite que a altura se ajuste ao conteúdo */
-    }
-
-    .hero-section h1 {
-        font-size: 2rem; /* Reduz o tamanho da fonte para ecrãs pequenos */
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
-    .button {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-
-    .info-section {
-        padding: 60px 20px;
-    }
-
-    .info-section h2 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-section p {
-        font-size: 0.9rem;
-    }
-
-    .button {
-        padding: 10px 20px;
-        font-size: 0.9
+    <!-- Rodapé da página: Direitos Autorais -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 VendaSmart. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
