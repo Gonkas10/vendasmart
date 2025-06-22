@@ -1,33 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VendaSmart</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendaSmart - A Plataforma Inteligente para Impulsionar as Tuas Vendas Online</title>
+    <!-- Liga o seu ficheiro CSS externo para o estilo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Adiciona um ícone simples para a aba do navegador (opcional, mas bom para a marca) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
 </head>
 <body>
-  <header class="topo">
-    <div class="logo">VendaSmart</div>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="precos.html">Preços</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="registo.html">Registo</a></li>
-        <li><a href="politica-privacidade.html">Privacidade</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Cabeçalho da página: Logotipo e Navegação -->
+    <header>
+        <div class="container">
+            <div class="logo">VendaSmart</div>
+            <nav>
+                <ul>
+                    <li><a href="#welcome">Início</a></li>
+                    <li><a href="#prices">Preços</a></li>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#register">Registo</a></li>
+                    <li><a href="#privacy">Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main class="conteudo">
-    <h1>Bem-vindo à VendaSmart</h1>
-    <p>A plataforma inteligente para impulsionar as tuas vendas online com automação e IA.</p>
-    <a href="registo.html" class="botao">Começar agora</a>
-  </main>
+    <!-- Secção de Boas-Vindas: Slogan e Chamada para Ação -->
+    <main>
+        <section id="welcome" class="hero-section">
+            <div class="container">
+                <h1>VendaSmart: A plataforma inteligente para impulsionar as tuas vendas online com automação e IA.</h1>
+                <p>Automatize as suas vendas online e integre inteligência artificial para resultados extraordinários.</p>
+                <a href="#get-started" class="button">Começar agora</a>
+            </div>
+        </section>
 
-  <footer class="rodape">
-    <p>© 2025 VendaSmart. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
+        <!-- Aqui pode adicionar mais secções como 'Preços', 'Sobre', etc. futuramente -->
+        <section id="prices" class="info-section">
+            <div class="container">
+                <h2>Preços</h2>
+                <p>Descubra os nossos planos flexíveis para todas as necessidades de negócio.</p>
+                <!-- Conteúdo de preços virá aqui -->
+            </div>
+        </section>
+
+        <section id="login" class="info-section">
+            <div class="container">
+                <h2>Login</h2>
+                <p>Acesse a sua conta VendaSmart.</p>
+                <!-- Formulário de login virá aqui -->
+            </div>
+        </section>
+
+        <section id="register" class="info-section">
+            <div class="container">
+                <h2>Registo</h2>
+                <p>Junte-se à comunidade VendaSmart e comece a impulsionar as suas vendas!</p>
+                <!-- Formulário de registo virá aqui -->
+            </div>
+        </section>
+
+        <section id="privacy" class="info-section">
+            <div class="container">
+                <h2>Política de Privacidade</h2>
+                <p>A sua privacidade é a nossa prioridade. Saiba como protegemos os seus dados.</p>
+                <!-- Conteúdo da política de privacidade virá aqui -->
+            </div>
+        </section>
+
+    </main>
