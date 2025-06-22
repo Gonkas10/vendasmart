@@ -29,6 +29,9 @@ body {
   display: flex;
   gap: 1.5rem;
 }
+.menu li {
+  list-style: none;
+}
 .menu a {
   color: #fff;
   text-decoration: none;
