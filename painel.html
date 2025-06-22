@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel - VendaSmart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>VendaSmart</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="precos.html">Preços</a></li>
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Painel do Utilizador</h2>
+    <p>Bem-vindo à tua área privada da VendaSmart. Aqui poderás gerir a tua conta e acompanhar o desempenho das tuas vendas.</p>
+    <div id="info-utilizador"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 VendaSmart. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="scripts/firebase-config.js"></script>
+  <script>
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        document.getElementById("info-utilizador").innerHTML = `
+          <p><strong>Email:</strong> ${user.email}</p>
+          <p><strong>ID:</strong> ${user.uid}</p>
+        `;
+      } else {
+        window.location.href = "login.html";
+      }
+    });
+
+    document.getElementById("logout").addEventListener("click", function () {
+      firebase.auth().signOut().then(() => {
+        window.location.href = "login.html";
+      });
+    });
+  </script>
+</body>
+</html>
 <!-- Conteúdo exemplo para painel.html -->
