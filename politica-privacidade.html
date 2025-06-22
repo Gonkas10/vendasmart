@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - VendaSmart</title>
+  <title>Política de Privacidade - VendaSmart</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,43 +13,41 @@
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="precos.html">Preços</a></li>
+        <li><a href="login.html">Login</a></li>
         <li><a href="registo.html">Registo</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Entrar na conta</h2>
-    <form id="form-login">
-      <label for="email">Email</label>
-      <input type="email" id="email" required />
-      <label for="password">Palavra-passe</label>
-      <input type="password" id="password" required />
-      <button type="submit">Entrar</button>
-    </form>
-    <p id="mensagem"></p>
+    <h2>Política de Privacidade</h2>
+    <p>Última atualização: 22 de junho de 2025</p>
+
+    <p>A tua privacidade é importante para nós. Esta Política explica como recolhemos, utilizamos, armazenamos e protegemos os teus dados pessoais na plataforma VendaSmart.</p>
+
+    <h3>1. Recolha de Dados</h3>
+    <p>Recolhemos o teu nome, email e outras informações que inseres aquando do registo ou utilização da plataforma.</p>
+
+    <h3>2. Utilização dos Dados</h3>
+    <p>Utilizamos os dados apenas para te fornecer acesso seguro à plataforma e para melhorar os nossos serviços com base nas tuas interações.</p>
+
+    <h3>3. Partilha de Dados</h3>
+    <p>Não vendemos nem partilhamos os teus dados com terceiros, exceto quando exigido por lei ou com o teu consentimento explícito.</p>
+
+    <h3>4. Segurança</h3>
+    <p>Usamos autenticação segura via Firebase e mantemos os dados em servidores protegidos. No entanto, nenhuma transmissão é 100% segura online.</p>
+
+    <h3>5. Os teus Direitos</h3>
+    <p>Podes solicitar o acesso, correção ou eliminação dos teus dados através do nosso formulário de contacto ou por email.</p>
+
+    <h3>6. Alterações</h3>
+    <p>Esta Política poderá ser atualizada. Notificaremos alterações importantes por email ou aviso na plataforma.</p>
+
+    <p>Se tiveres dúvidas, contacta-nos através de <strong>suporte@vendasmart.pt</strong>.</p>
   </main>
 
   <footer>
     <p>&copy; 2025 VendaSmart. Todos os direitos reservados.</p>
   </footer>
-
-  <script src="scripts/firebase-config.js"></script>
-  <script>
-    document.getElementById("form-login").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(() => {
-          window.location.href = "painel.html";
-        })
-        .catch((error) => {
-          document.getElementById("mensagem").textContent = error.message;
-        });
-    });
-  </script>
 </body>
 </html>
-<!-- Conteúdo exemplo para politica-privacidade.html -->
