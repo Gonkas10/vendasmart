@@ -1,6 +1,6 @@
-// Importa as funções do SDK que precisas
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+// Importa as funções do SDK Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
 
 // Configuração do Firebase
 const firebaseConfig = {
@@ -9,13 +9,12 @@ const firebaseConfig = {
   projectId: "vendasmart-81e36",
   storageBucket: "vendasmart-81e36.appspot.com",
   messagingSenderId: "10406121081",
-  appId: "1:10406121081:web:44efb3ee41599e93b1d638",
-  measurementId: "G-LRCSSRXL2R"
+  appId: "1:10406121081:web:3ee2a445483dabbfb1d638",
+  measurementId: "G-J1KRTFN8YG"
 };
 
-// Inicializa a app Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
 
-// Exporta o serviço de autenticação para usar nos outros ficheiros
+// Exporta o serviço de autenticação
 export const auth = getAuth(app);
-// Código exemplo
