@@ -1,54 +1,71 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset e base */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
-  color: #333;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.6;
 }
 
-header, footer {
+/* Topo */
+.topo {
   background-color: #003366;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
-
-nav {
-  background-color: #66CCFF;
-  padding: 10px;
-  text-align: center;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-
-nav a {
-  color: white;
-  margin: 0 15px;
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.menu a {
+  color: #fff;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.menu a:hover {
+  color: #66CCFF;
 }
 
-main {
-  padding: 20px;
+/* Conteúdo */
+.conteudo {
   max-width: 800px;
-  margin: auto;
+  margin: 4rem auto;
+  text-align: center;
+}
+.botao {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #003366;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.botao:hover {
+  background-color: #005599;
 }
 
-h1 {
-  color: #003366;
+/* Rodapé */
+.rodape {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
 }
-
-a {
-  color: #003366;
-}
-
-button {
-  background-color: #99CC99;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #88bb88;
-}
-// Código exemplo
